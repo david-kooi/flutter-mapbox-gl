@@ -68,6 +68,8 @@ import com.mapbox.mapboxsdk.plugins.annotation.Symbol;
 import com.mapbox.mapboxsdk.plugins.annotation.SymbolManager;
 import com.mapbox.mapboxsdk.plugins.annotation.SymbolOptions;
 import com.mapbox.mapboxsdk.plugins.localization.LocalizationPlugin;
+import com.mapbox.pluginscalebar.ScaleBarOptions;
+import com.mapbox.pluginscalebar.ScaleBarPlugin;
 import com.mapbox.mapboxsdk.style.expressions.Expression;
 import com.mapbox.mapboxsdk.style.layers.RasterLayer;
 import com.mapbox.mapboxsdk.style.sources.ImageSource;
@@ -261,6 +263,21 @@ final class MapboxMapController
     mapboxMap.addOnCameraMoveStartedListener(this);
     mapboxMap.addOnCameraMoveListener(this);
     mapboxMap.addOnCameraIdleListener(this);
+
+    ScaleBarPlugin scaleBarPlugin = new ScaleBarPlugin(this.mapView, mapboxMap);
+    ScaleBarOptions scaleBarOptions = new ScaleBarOptions(this.context)
+            .setTextSize(40f)
+            .setMaxWidthRatio(0.4f)
+            .setBarHeight(15f)
+            .setBorderWidth(5f)
+            .setMetricUnit(false)
+            .setRefreshInterval(15)
+            .setMarginTop(30f)
+            .setMarginLeft(16f)
+            .setTextBarMargin(15f);
+            //.setTextColor(R.color.mapboxRed)
+
+    scaleBarPlugin.create(scaleBarOptions);
 
     mapView.addOnStyleImageMissingListener((id) -> {
       DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
