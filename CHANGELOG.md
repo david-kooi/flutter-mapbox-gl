@@ -1,4 +1,36 @@
-## 0.12.0, April 12, 2020
+## 0.15.0, Unreleased
+### Breaking changes
+* callbacks added to onFeatureTapped will now also get the position (`Point<double>`) and the location (`LatLng`) of the click passed when called [#798](https://github.com/flutter-mapbox-gl/maps/pull/798) 
+
+
+## 0.14.0, November 13, 2021
+* Remove memory leaks by disposing internal components [#706](https://github.com/tobrun/flutter-mapbox-gl/pull/706) 
+* Improved annotation click order [#748](https://github.com/tobrun/flutter-mapbox-gl/pull/748)
+* Add support for Layers, properties and expressions backed by GeoJsonSource [#723](https://github.com/tobrun/flutter-mapbox-gl/pull/723)
+* Add attribution button gravity, position normally [#731](https://github.com/tobrun/flutter-mapbox-gl/pull/731)
+* Add documentation for setMapLanguage [#740](https://github.com/tobrun/flutter-mapbox-gl/pull/740)
+* Make sure onStyleLoaded callback is invoked when map is loaded and ready [#690](https://github.com/tobrun/flutter-mapbox-gl/pull/690)
+* Enable onMapIdle callback for android [#729](https://github.com/tobrun/flutter-mapbox-gl/pull/729)
+* Set attribution margin to use left margin [#714](https://github.com/tobrun/flutter-mapbox-gl/pull/714)
+* Getting the ACCESS_TOKEN from env [#726](https://github.com/tobrun/flutter-mapbox-gl/pull/726)
+* Fixed crashes with offline manager [#724](https://github.com/tobrun/flutter-mapbox-gl/pull/724)
+* Add divider for example list [#712](https://github.com/tobrun/flutter-mapbox-gl/pull/712)
+* Fix respecting annotationConsumeTapEvents on iOS [#716](https://github.com/tobrun/flutter-mapbox-gl/pull/716)
+* Add getSymbolLatLng and getLineLatLngs for web [#720](https://github.com/tobrun/flutter-mapbox-gl/pull/720)
+* Fix typo in downloads token property name according to docs [#721](https://github.com/tobrun/flutter-mapbox-gl/pull/721)
+* Remove MapboxGlPlatform.getInstance [#710](https://github.com/tobrun/flutter-mapbox-gl/pull/710)
+
+## 0.13.0, October 21, 2021
+* Migrate to null-safety [#607](https://github.com/tobrun/flutter-mapbox-gl/pull/607)
+* Add missing removeLines removeCircles and removeFills [#622](https://github.com/tobrun/flutter-mapbox-gl/pull/622)
+* Add support for colors with alpha [#561](https://github.com/tobrun/flutter-mapbox-gl/pull/561)
+* Support override of attribution click action (iOS) [#605](https://github.com/tobrun/flutter-mapbox-gl/pull/605)
+* Update to Mapbox-Android-SDK 9.6.2 [#674](https://github.com/tobrun/flutter-mapbox-gl/pull/674)
+* Fix Warning: Operand of null-aware operation '!' has type 'Locale' which excludes null [#676](https://github.com/tobrun/flutter-mapbox-gl/pull/676)
+* Make build work with instructions in docs (android) [#698](https://github.com/tobrun/flutter-mapbox-gl/pull/698)
+* Fix requestMyLocationLatLng in the platform interface [#697](https://github.com/tobrun/flutter-mapbox-gl/pull/697)
+
+## 0.12.0, April 12, 2021
 * Update to Mapbox-Android-SDK 9.6.0 [#489](https://github.com/tobrun/flutter-mapbox-gl/pull/489)
 * Update to Mapbox-iOS-SDK 6.3.0 [#513](https://github.com/tobrun/flutter-mapbox-gl/pull/513)
 * Batch creation/removal for circles, fills and lines [#576](https://github.com/tobrun/flutter-mapbox-gl/pull/576)
@@ -8,7 +40,7 @@
 * Emit onTap only for the feature above the others [#589](https://github.com/tobrun/flutter-mapbox-gl/pull/589)
 * Add annotationOrder to web [#588](https://github.com/tobrun/flutter-mapbox-gl/pull/588)
 
-## 0.11.0, March 30, 2020
+## 0.11.0, March 30, 2021
 * Fixed issues caused by new android API [#544](https://github.com/tobrun/flutter-mapbox-gl/pull/544)
 * Add option to set maximum offline tile count [#549](https://github.com/tobrun/flutter-mapbox-gl/pull/549)
 * Fixed web build failure due to http package upgrade [#550](https://github.com/tobrun/flutter-mapbox-gl/pull/550)
@@ -21,7 +53,7 @@
 * Define which annotations consume the tap events [#575](https://github.com/tobrun/flutter-mapbox-gl/pull/575)
 * Remove failed offline region downloads [#583](https://github.com/tobrun/flutter-mapbox-gl/pull/583)
 
-## 0.10.0, February 12, 2020
+## 0.10.0, February 12, 2021
 * Merge offline regions [#532](https://github.com/tobrun/flutter-mapbox-gl/pull/532)
 * Update offline region metadata [#530](https://github.com/tobrun/flutter-mapbox-gl/pull/530)
 * Added web support for fills [#501](https://github.com/tobrun/flutter-mapbox-gl/pull/501)
